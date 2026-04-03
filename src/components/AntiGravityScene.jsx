@@ -24,7 +24,7 @@ const ParticleField = ({ count = 300 }) => {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#C9841A" transparent opacity={0.4} />
+      <pointsMaterial size={0.02} color="#A8B828" transparent opacity={0.4} />
     </points>
   );
 };
@@ -102,7 +102,7 @@ const AntiGravityScene = () => {
       >
         <PerspectiveCamera makeDefault position={[0, 0, 7]} fov={50} />
         <ambientLight intensity={0.6} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} color="#C9841A" />
+        <pointLight position={[10, 10, 10]} intensity={1.5} color="#A8B828" />
         <spotLight position={[-10, 20, -10]} intensity={0.5} angle={0.2} penumbra={1} />
 
         {/* 3D Textures / Models */}

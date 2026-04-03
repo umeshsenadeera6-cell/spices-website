@@ -10,14 +10,14 @@ const Hero = () => {
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_40%,rgba(139,26,26,0.15)_0%,rgba(90,40,15,0.08)_50%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_40%,rgba(45,90,61,0.2)_0%,rgba(13,22,16,0.1)_50%,transparent_100%)]" />
 
       <div className="relative z-10 text-center max-w-[900px] px-6">
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className={`text-[11px] tracking-[4px] uppercase text-spice-gold-light mb-6 ${isNonEnglish ? 'font-si' : ''}`}
+          className={`text-[11px] tracking-[4px] uppercase text-spice-accent-light mb-6 ${isNonEnglish ? 'font-si' : ''}`}
         >
           {t('hero.eyebrow')}
         </motion.p>

@@ -18,14 +18,14 @@ const ProcessTimeline = () => {
     <section id="process" className="py-32 px-12 bg-spice-dark relative overflow-hidden">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-24">
-          <span className={`text-[10px] tracking-[4px] uppercase text-spice-gold mb-4 block ${isNonEnglish ? 'font-si' : ''}`}>{t('process.label')}</span>
+          <span className={`text-[10px] tracking-[4px] uppercase text-spice-accent mb-4 block ${isNonEnglish ? 'font-si' : ''}`}>{t('process.label')}</span>
           <h2 className={`font-display text-[clamp(44px,5vw,64px)] font-light leading-[1.1] text-spice-cream ${isNonEnglish ? 'font-si' : ''}`}
               dangerouslySetInnerHTML={{ __html: t('process.title') }} />
         </div>
 
         <div className="relative flex justify-between gap-5 flex-col md:flex-row">
           {/* Connecting Line */}
-          <div className="absolute top-10 left-[5%] w-[90%] h-[1px] bg-gradient-to-r from-transparent via-spice-gold to-transparent opacity-30 hidden md:block" />
+          <div className="absolute top-10 left-[5%] w-[90%] h-[1px] bg-gradient-to-r from-transparent via-spice-accent to-transparent opacity-30 hidden md:block" />
 
           {steps.map((step, index) => (
             <motion.div
@@ -38,10 +38,10 @@ const ProcessTimeline = () => {
             >
               <motion.div
                 whileHover={{ y: -8 }}
-                className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-6 relative z-10 backdrop-blur-xl transition-all duration-300 group-hover:bg-spice-gold group-hover:border-spice-gold group-hover:shadow-[0_0_30px_rgba(201,132,16,0.3)]"
+                className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-6 relative z-10 backdrop-blur-xl transition-all duration-300 group-hover:bg-spice-accent group-hover:border-spice-accent group-hover:shadow-[0_0_30px_rgba(168,184,40,0.3)]"
               >
                 {step.emoji}
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-spice-crimson rounded-full flex items-center justify-center text-[10px] text-white font-bold leading-none shadow-lg">
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-spice-primary-light rounded-full flex items-center justify-center text-[10px] text-white font-bold leading-none shadow-lg">
                   {index + 1}
                 </div>
               </motion.div>

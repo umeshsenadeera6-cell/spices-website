@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-[1000] px-12 py-5 flex items-center justify-between transition-all duration-400 ${
       scrolled ? 'bg-spice-dark/85 backdrop-blur-2xl border-b border-white/10' : ''
     }`}>
-      <a href="#hero" className="font-display text-3xl font-semibold tracking-wider text-spice-gold-light decoration-none">
+      <a href="#hero" className="font-display text-3xl font-semibold tracking-wider text-spice-accent-light decoration-none">
         Ceylon<span className="text-spice-cream font-light">Aura</span>
       </a>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
           <li key={item.key}>
             <a 
               href={item.href} 
-              className={`text-[13px] tracking-[1.5px] uppercase no-underline transition-colors duration-300 hover:text-spice-gold-light ${
+              className={`text-[13px] tracking-[1.5px] uppercase no-underline transition-colors duration-300 hover:text-spice-accent-light ${
                 i18n.language === 'si' ? 'font-si' : i18n.language === 'ta' ? 'font-ta' : ''
               }`}
             >
@@ -53,8 +53,8 @@ const Navbar = () => {
               onClick={() => changeLanguage(lang)}
               className={`text-[11px] tracking-[1.5px] px-3 py-1.5 rounded-full cursor-pointer transition-all duration-300 ${
                 i18n.language === lang 
-                  ? 'bg-spice-gold text-spice-dark font-medium' 
-                  : 'text-white/60 hover:text-spice-gold-light'
+                  ? 'bg-spice-accent text-spice-dark font-medium' 
+                  : 'text-white/60 hover:text-spice-accent-light'
               }`}
             >
               {lang === 'si' ? 'සිං' : lang === 'ta' ? 'தமிழ்' : 'EN'}

@@ -18,9 +18,9 @@ const About = () => {
            className="glass-panel p-14 rounded-[24px] relative overflow-hidden"
         >
           {/* Subtle Glow Overlay */}
-          <div className="absolute -top-[40%] -right-[20%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(139,26,26,0.4)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute -top-[40%] -right-[20%] w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(45,90,61,0.4)_0%,transparent_70%)] pointer-events-none" />
 
-          <span className={`text-[10px] tracking-[4px] uppercase text-spice-gold mb-4 block ${isNonEnglish ? 'font-si' : ''}`}>{t('about.label')}</span>
+          <span className={`text-[10px] tracking-[4px] uppercase text-spice-accent mb-4 block ${isNonEnglish ? 'font-si' : ''}`}>{t('about.label')}</span>
           <h2 className={`font-display text-[clamp(40px,5vw,64px)] font-light leading-[1.1] text-spice-cream mb-6 ${isNonEnglish ? 'font-si' : ''}`}
             dangerouslySetInnerHTML={{ __html: t('about.title') }}
           />
@@ -30,15 +30,15 @@ const About = () => {
 
           <div className="grid grid-cols-3 gap-6">
             <div className="text-center p-6 bg-white/[0.03] border border-white/5 rounded-2xl">
-              <span className="font-display text-[42px] font-light text-spice-gold-light block leading-none">36+</span>
+              <span className="font-display text-[42px] font-light text-spice-accent-light block leading-none">36+</span>
               <span className="text-[11px] tracking-[2px] uppercase text-white/40 block mt-2">{t('about.years')}</span>
             </div>
             <div className="text-center p-6 bg-white/[0.03] border border-white/5 rounded-2xl">
-              <span className="font-display text-[42px] font-light text-spice-gold-light block leading-none">42</span>
+              <span className="font-display text-[42px] font-light text-spice-accent-light block leading-none">42</span>
               <span className="text-[11px] tracking-[2px] uppercase text-white/40 block mt-2">{t('about.countries')}</span>
             </div>
             <div className="text-center p-6 bg-white/[0.03] border border-white/5 rounded-2xl">
-              <span className="font-display text-[42px] font-light text-spice-gold-light block leading-none">100%</span>
+              <span className="font-display text-[42px] font-light text-spice-accent-light block leading-none">100%</span>
               <span className="text-[11px] tracking-[2px] uppercase text-white/40 block mt-2">{t('about.organic')}</span>
             </div>
           </div>
@@ -52,7 +52,7 @@ const About = () => {
            transition={{ duration: 1 }}
            className="relative h-[480px] rounded-[24px] overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#5C3317] via-[#8B1A1A] to-[#C9841A] flex items-center justify-center">
+          <div className="absolute inset-0 bg-gradient-to-tr from-[#1A3320] via-[#2D5A3D] to-[#A8B828] flex items-center justify-center">
             {/* Spice Circles / Background Decorations */}
             <div className="absolute w-[300px] h-[300px] border-2 border-white/5 rounded-full animate-[spin_20s_linear_infinite]" />
             <div className="absolute w-[200px] h-[200px] border border-white/10 rounded-full animate-[spin_12s_linear_infinite_reverse]" />

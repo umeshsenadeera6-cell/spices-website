@@ -23,7 +23,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
              exit={{ scale: 0.95, y: 20, opacity: 0 }}
              className="bg-[#160F0A] border border-white/10 rounded-[28px] max-w-[700px] w-full max-h-[90vh] overflow-y-auto relative p-12"
           >
-            <button onClick={onClose} className="absolute top-6 right-6 bg-white/5 border border-white/10 rounded-full w-10 h-10 flex items-center justify-center hover:bg-spice-crimson hover:border-spice-crimson transition-all transition-colors duration-300">
+            <button onClick={onClose} className="absolute top-6 right-6 bg-white/5 border border-white/10 rounded-full w-10 h-10 flex items-center justify-center hover:bg-spice-primary hover:border-spice-primary transition-all transition-colors duration-300">
               <X size={20} />
             </button>
 
@@ -44,15 +44,15 @@ const ProductModal = ({ product, isOpen, onClose }) => {
             <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <span className="text-[10px] tracking-[2px] uppercase text-white/40 block mb-1">{t('products.origin')}</span>
-                <span className="font-display text-[20px] text-spice-gold-light leading-none">{product.origin}</span>
+                <span className="font-display text-[20px] text-spice-accent-light leading-none">{product.origin}</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <span className="text-[10px] tracking-[2px] uppercase text-white/40 block mb-1">{t('products.grade')}</span>
-                <span className="font-display text-[20px] text-spice-gold-light leading-none">{product.grade}</span>
+                <span className="font-display text-[20px] text-spice-accent-light leading-none">{product.grade}</span>
               </div>
               <div className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
                 <span className="text-[10px] tracking-[2px] uppercase text-white/40 block mb-1">{t('products.form')}</span>
-                <span className="font-display text-[20px] text-spice-gold-light leading-none">{product.form}</span>
+                <span className="font-display text-[20px] text-spice-accent-light leading-none">{product.form}</span>
               </div>
             </div>
 
@@ -89,7 +89,7 @@ const ProductCard = ({ product, index, onClick }) => {
              style={{ background: product.glow }} />
       </div>
       <div className="p-6">
-        <span className="text-[10px] tracking-[2px] uppercase text-spice-gold mb-2 block">
+        <span className="text-[10px] tracking-[2px] uppercase text-spice-accent mb-2 block">
           {product.tag === 'spice' ? t('products.spices') : t('products.herbs')}
         </span>
         <div className="font-display text-2xl font-normal text-spice-cream mb-2 leading-tight">
@@ -99,8 +99,8 @@ const ProductCard = ({ product, index, onClick }) => {
           {(product.desc[i18n.language] || product.desc.en).substring(0, 90)}...
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-[11px] tracking-[1px] text-spice-green-light uppercase">📍 {product.origin}</span>
-          <button className="bg-transparent border border-spice-gold text-spice-gold px-5 py-2 rounded-full text-[11px] tracking-[1px] uppercase transition-all duration-300 group-hover:bg-spice-gold group-hover:text-spice-dark">
+          <span className="text-[11px] tracking-[1px] text-spice-primary-light uppercase">📍 {product.origin}</span>
+          <button className="bg-transparent border border-spice-accent text-spice-accent px-5 py-2 rounded-full text-[11px] tracking-[1px] uppercase transition-all duration-300 group-hover:bg-spice-accent group-hover:text-spice-dark">
             {t('products.details')}
           </button>
         </div>
@@ -165,19 +165,19 @@ const Products = () => {
       <div className="max-w-[1300px] mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-14 gap-8">
           <div>
-            <span className="text-[10px] tracking-[4px] uppercase text-spice-gold mb-4 block leading-none">{t('products.label')}</span>
+            <span className="text-[10px] tracking-[4px] uppercase text-spice-accent mb-4 block leading-none">{t('products.label')}</span>
             <h2 className="font-display text-[clamp(44px,5vw,64px)] font-light leading-[1.1] text-spice-cream"
                 dangerouslySetInnerHTML={{ __html: t('products.title') }} />
           </div>
           
           <div className="flex flex-wrap gap-3">
             <div className="relative group">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 group-focus-within:text-spice-gold transition-colors" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30 group-focus-within:text-spice-accent transition-colors" />
               <input 
                 type="text" 
                 placeholder={t('products.search')}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-white/5 border border-white/10 rounded-full py-3 pl-11 pr-6 text-sm text-spice-cream outline-none focus:border-spice-gold transition-all w-[240px]"
+                className="bg-white/5 border border-white/10 rounded-full py-3 pl-11 pr-6 text-sm text-spice-cream outline-none focus:border-spice-accent transition-all w-[240px]"
               />
             </div>
             {['all', 'spice', 'herb'].map((tag) => (
@@ -185,7 +185,7 @@ const Products = () => {
                 key={tag}
                 onClick={() => setActiveTag(tag)}
                 className={`px-6 py-3 rounded-full text-[12px] tracking-[1px] uppercase cursor-pointer transition-all duration-300 ${
-                  activeTag === tag ? 'bg-spice-gold text-spice-dark font-medium' : 'bg-white/5 border border-white/10 text-white/40 hover:border-white/30'
+                  activeTag === tag ? 'bg-spice-accent text-spice-dark font-medium' : 'bg-white/5 border border-white/10 text-white/40 hover:border-white/30'
                 }`}
               >
                 {t(`products.${tag}`)}
