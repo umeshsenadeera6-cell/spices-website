@@ -75,9 +75,10 @@ const FloatingSpice = ({ texturePath, position, scale, rotationSpeed = 1, opacit
          <meshStandardMaterial 
            map={texture} 
            transparent 
-           alphaTest={0.05}
+           alphaTest={0.5}
            opacity={opacity}
            side={THREE.DoubleSide} 
+           blending={THREE.AdditiveBlending} /* Use Additive or Multiply to handle white background */
          />
       </mesh>
     </Float>
@@ -108,21 +109,47 @@ const AntiGravityScene = () => {
         {/* 3D Textures / Models */}
         <FloatingSpice 
           texturePath="/assets/cinnamon.png" 
-          position={[-3, 1.5, -2]} 
+          position={[-4, 2, -2]} 
           scale={[4, 4, 1]} 
           rotationSpeed={0.4} 
         />
         <FloatingSpice 
           texturePath="/assets/pepper.png" 
-          position={[3.5, -2, 1]} 
-          scale={[2, 2, 1]} 
+          position={[4, -2, 1]} 
+          scale={[2.2, 2.2, 1]} 
           rotationSpeed={0.8} 
         />
         <FloatingSpice 
           texturePath="/assets/cloves.png" 
-          position={[-2, -2.5, -1]} 
+          position={[-2, -3, -1]} 
           scale={[2.5, 2.5, 1]} 
           rotationSpeed={0.6} 
+        />
+        
+        {/* New Assets */}
+        <FloatingSpice 
+          texturePath="/assets/cardamom.png" 
+          position={[3, 3, -3]} 
+          scale={[3, 3, 1]} 
+          rotationSpeed={0.5} 
+        />
+        <FloatingSpice 
+          texturePath="/assets/turmeric.png" 
+          position={[-5, -1, 0]} 
+          scale={[2.8, 2.8, 1]} 
+          rotationSpeed={0.7} 
+        />
+        <FloatingSpice 
+          texturePath="/assets/staranise.png" 
+          position={[5, 1, -2]} 
+          scale={[3.2, 3.2, 1]} 
+          rotationSpeed={0.3} 
+        />
+        <FloatingSpice 
+          texturePath="/assets/redchilli.png" 
+          position={[-1, 2.5, 1]} 
+          scale={[2, 2, 1]} 
+          rotationSpeed={0.9} 
         />
 
         {/* Emoji Particles for Hybrid Feel */}

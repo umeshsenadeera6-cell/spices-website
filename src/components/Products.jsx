@@ -33,7 +33,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               {product.image && <img src={product.image} alt={product.name[i18n.language] || product.name.en} className="w-[150%] h-[150%] object-contain opacity-20 absolute" />}
             </div>
 
-            <span className="text-[10px] tracking-[3px] uppercase text-spice-gold">{product.tag.toUpperCase()}</span>
+            <span className="text-[10px] tracking-[3px] uppercase text-spice-accent">{product.tag.toUpperCase()}</span>
             <h2 className="font-display text-[42px] font-light text-spice-cream mt-2 mb-4 leading-tight">
               {product.name[i18n.language] || product.name.en}
             </h2>
@@ -78,7 +78,7 @@ const ProductCard = ({ product, index, onClick }) => {
       viewport={{ once: true }}
       transition={{ delay: index * 0.07 }}
       onClick={() => onClick(product)}
-      className="product-card group bg-white/5 border border-white/10 rounded-[24px] overflow-hidden cursor-pointer transition-all duration-400 hover:translate-y-[-8px] hover:border-spice-gold/30 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(201,132,16,0.1)]"
+      className="product-card group bg-white/5 border border-white/10 rounded-[24px] overflow-hidden cursor-pointer transition-all duration-400 hover:translate-y-[-8px] hover:border-spice-accent/30 hover:shadow-[0_24px_60px_rgba(0,0,0,0.5),0_0_40px_rgba(168,184,40,0.1)]"
     >
       <div 
         className="h-[200px] w-full flex items-center justify-center text-[72px] relative overflow-hidden"
@@ -124,7 +124,7 @@ const Products = () => {
      name:{en:'Tellicherry Black Pepper',si:'ගම්මිරිස්',ta:'கருப்பு மிளகு'},
      desc:{en:'Premium bold pepper with complex heat and floral notes. Sourced from native cultivars grown on Sri Lankan slopes.',si:'ශ්රී ලංකාවේ බෑවුම් වල වගා කළ ශ්රේෂ්ඨ ගම්මිරිස්.',ta:'இலங்கை சரிவுகளில் வளர்க்கப்படும் சிறந்த மிளகு.'},
      origin:'Matale, Kandy',grade:'TGSEB',form:'Whole / Ground',minOrder:'250 kg'},
-    {id:3,emoji:'💚',color:'#3D6B3A',glow:'rgba(61,107,58,0.6)',tag:'spice',
+    {id:3,emoji:'💚',color:'#3D6B3A',glow:'rgba(61,107,58,0.6)',tag:'spice',image:'/assets/cardamom.png',
      name:{en:'Green Cardamom',si:'එනසාල්',ta:'பச்சை ஏலக்காய்'},
      desc:{en:'Aromatic, bold cardamom pods with a sweet-spicy profile. Perfect for teas and premium blends.',si:'සුවඳැති එනසාල් කරල්.',ta:'நறுமணமுள்ள ஏலக்காய் காய்கள்.'},
      origin:'Nuwara Eliya',grade:'AGB, 7mm+',form:'Whole Pods',minOrder:'50 kg'},
@@ -132,11 +132,11 @@ const Products = () => {
      name:{en:'Zanzibar Cloves',si:'කරාබුනැටි',ta:'கிராம்பு'},
      desc:{en:'Intensely aromatic cloves with high eugenol content, hand-harvested and sun-dried traditionally.',si:'සුවඳැති කරාබුනැටි.',ta:'நறுமணமிக்க கிராம்பு.'},
      origin:'Southern Province',grade:'HH Grade',form:'Whole / Powder',minOrder:'100 kg'},
-    {id:5,emoji:'🟡',color:'#8B6914',glow:'rgba(201,132,26,0.6)',tag:'spice',
+    {id:5,emoji:'🟡',color:'#8B6914',glow:'rgba(201,132,26,0.6)',tag:'spice',image:'/assets/turmeric.png',
      name:{en:'Organic Turmeric',si:'කහ',ta:'கரிம மஞ்சள்'},
      desc:{en:'High-curcumin turmeric grown organically in the dry zone. Vivid golden color and medicinal power.',si:'වියළි කලාපයේ වගා කළ කහ.',ta:'இயற்கையான மஞ்சள்.'},
      origin:'Polonnaruwa',grade:'3% / 5% Curcumin',form:'Fingers / Powder',minOrder:'200 kg'},
-    {id:6,emoji:'🫚',color:'#6B3A0A',glow:'rgba(107,58,10,0.6)',tag:'spice',
+    {id:6,emoji:'🫚',color:'#6B3A0A',glow:'rgba(107,58,10,0.6)',tag:'spice',image:'/assets/staranise.png',
      name:{en:'Ceylon Nutmeg & Mace',si:'සාදික්කා',ta:'ஜாதிக்காய்'},
      desc:{en:'Premium Myristica fragrans — both the nut and its precious mace, offering sweet complexity.',si:'සාදික්කා සහ වසාවාසි.',ta:'ஜாதிக்காய் மற்றும் ஜாதிப்பத்திரி.'},
      origin:'Galle, Matara',grade:'SS/SF Grade',form:'Whole / Broken',minOrder:'50 kg'},
@@ -144,8 +144,8 @@ const Products = () => {
      name:{en:'Moringa Leaf Powder',si:'මුරුංගා කොළ කුඩු',ta:'முருங்கை இலை பொடி'},
      desc:{en:'Nutrient-dense moringa leaf, shade-dried and micro-ground. Rich in protein and antioxidants.',si:'මුරුංගා කොළ.',ta:'முருங்கை இலை.'},
      origin:'North Central Province',grade:'Organic Certified',form:'Fine Powder',minOrder:'25 kg'},
-    {id:8,emoji:'🟠',color:'#8B3A0A',glow:'rgba(139,58,10,0.6)',tag:'herb',
-     name:{en:'Dried Chilli',si:'වියළි මිරිස්',ta:'காய்ந்த மிளகாய்'},
+    {id:8,emoji:'🟠',color:'#8B3A0A',glow:'rgba(139,58,10,0.6)',tag:'herb',image:'/assets/redchilli.png',
+     name:{en:'Dried Chilli',si:'වියළි මිරිස්',ta:'කැඩුණු මිරිස්'},
      desc:{en:'Fiery bird\'s eye chillies, sun-dried for concentrated heat and vibrant color.',si:'වියළි මිරිස්.',ta:'காய்ந்த மிளகாய்.'},
      origin:'Jaffna, Anuradhapura',grade:'SHU 100,000+',form:'Whole / Crushed',minOrder:'100 kg'},
   ];
