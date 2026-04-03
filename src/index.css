@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-spice-crimson: #8B1A1A;
+  --color-spice-crimson-light: #C4432B;
+  --color-spice-gold: #C9841A;
+  --color-spice-gold-light: #E8A830;
+  --color-spice-brown: #5C3317;
+  --color-spice-green: #1A3320;
+  --color-spice-cream: #F5EED8;
+  --color-spice-dark: #0A0705;
+
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Outfit", sans-serif;
+  --font-si: "Noto Sans Sinhala", sans-serif;
+  --font-ta: "Noto Sans Tamil", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-spice-dark text-spice-cream font-body m-0 p-0 overflow-x-hidden;
+    background: radial-gradient(circle at 50% 40%, #160F0A 0%, #0A0705 100%);
+    cursor: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-spice-cream;
+  }
+
+  em {
+    @apply italic text-spice-gold-light not-italic;
+    font-style: italic;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-spice-gold text-spice-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:bg-spice-gold-light hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(201,132,16,0.4)];
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-spice-cream border border-white/20 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:border-spice-gold-light hover:text-spice-gold-light hover:-translate-y-1;
+  }
+
+  .trans-si { font-family: var(--font-si); }
+  .trans-ta { font-family: var(--font-ta); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0705;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9841A;
+  border-radius: 2px;
+}
