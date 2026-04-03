@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-spice-primary: #2D5A3D;
-  --color-spice-primary-light: #3D8B5A;
-  --color-spice-accent: #A8B828;
-  --color-spice-accent-light: #E8CC30;
+  --color-spice-primary: #2D5A27;       /* Deep Leaf Green */
+  --color-spice-primary-light: #C5E1A5; /* Pale Mint/Garden Green */
+  --color-spice-accent: #FFB300;        /* Honey/Golden Yellow */
+  --color-spice-accent-light: #FFFDE7;  /* Cream/Vanilla */
   --color-spice-brown: #5C3317;
-  --color-spice-green: #1A3320;
-  --color-spice-cream: #F5EED8;
-  --color-spice-dark: #0A0D0B;
+  --color-spice-dark: #0A0D0B;          /* Dark Greenish base */
+  --color-spice-cream: #FFFDE7;
 
   --font-display: "Cormorant Gramond", serif;
   --font-body: "Outfit", sans-serif;
@@ -19,7 +18,7 @@
 @layer base {
   body {
     @apply bg-spice-dark text-spice-cream font-body m-0 p-0 overflow-x-hidden;
-    background: radial-gradient(circle at 50% 40%, #0D1610 0%, #0A0D0B 100%);
+    background: radial-gradient(circle at 50% 40%, #0D1611 0%, #0A0D0B 100%);
     cursor: none;
   }
 
@@ -28,7 +27,7 @@
   }
 
   em {
-    @apply italic text-spice-accent-light not-italic;
+    @apply italic text-spice-accent not-italic;
     font-style: italic;
   }
 }
@@ -39,11 +38,11 @@
   }
 
   .btn-primary {
-    @apply bg-spice-accent text-spice-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:bg-spice-accent-light hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(168,184,40,0.3)];
+    @apply bg-spice-accent text-spice-dark px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:bg-spice-accent-light hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(255,179,0,0.3)];
   }
 
   .btn-ghost {
-    @apply bg-transparent text-spice-cream border border-white/20 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:border-spice-accent-light hover:text-spice-accent-light hover:-translate-y-1;
+    @apply bg-transparent text-spice-cream border border-white/20 px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300 hover:border-spice-accent hover:text-spice-accent hover:-translate-y-1;
   }
 
   .trans-si { font-family: var(--font-si); }
@@ -58,6 +57,6 @@
   background: #0A0D0B;
 }
 ::-webkit-scrollbar-thumb {
-  background: #A8B828;
+  background: #FFB300;
   border-radius: 2px;
 }
